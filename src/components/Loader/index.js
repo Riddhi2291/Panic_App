@@ -23,7 +23,11 @@ const Loader = (props, ref) => {
 
   return (
     <View style={styles.container}>
-      <ActivityIndicator animating={loading} color={colors.sky} size="large" />
+      <ActivityIndicator
+        animating={loading == 1 ? true : false}
+        color={colors.sky}
+        size="large"
+      />
     </View>
   );
 };

@@ -287,7 +287,7 @@ const styles = StyleSheet.create({
     },
     shadowColor: colors.shadow,
     width: '100%',
-    marginTop: hp(5),
+    marginTop: Platform.OS === 'ios' ? hp(5) : 0,
   },
   backBtnContainer: {
     paddingStart: 20,

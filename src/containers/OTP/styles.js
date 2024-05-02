@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import colors from '../../assets/colors';
-import {hp, normalize, wp} from '../../styles/responsiveScreen';
+import {hp, isAndroid, normalize, wp} from '../../styles/responsiveScreen';
 
 export const styles = StyleSheet.create({
   container: {
@@ -26,7 +26,12 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   highlightedText: {
+    fontSize: normalize(16),
     fontFamily: 'worksans-semibold',
+    color: colors.textPrimary,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginBottom: isAndroid ? -5 : -3,
   },
   otpContainer: {
     width: '100%',

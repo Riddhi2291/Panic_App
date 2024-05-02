@@ -40,8 +40,11 @@ export function normalize(size) {
     }
     return Math.round(newSize);
   }
-  if (isTablet) {
-    return Math.round(newSize) - wp(1);
+  if (Platform.OS === 'android') {
+    if (isTablet) {
+      return Math.round(newSize) - wp(1);
+    }
+    return Math.round(newSize) - 0.3;
   }
   return Math.round(newSize);
 }
