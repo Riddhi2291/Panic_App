@@ -111,12 +111,10 @@ export default class CountryPicker extends Component {
       <View>
         <TouchableOpacity onPress={() => this._listItemClickListener(item)}>
           <View style={styles.listViewRowContainer}>
-            {/* {this.props.hideCountryFlag ? null : ( */}
             <Image
               source={{uri: item.flag}}
               style={styles.countryFlagContainer}
             />
-            {/* )} */}
             <Text style={this.props.countryNameTextStyle}>
               {item?.name?.en + ' (+' + item.callingCode + ')'}
             </Text>
@@ -130,39 +128,6 @@ export default class CountryPicker extends Component {
   render() {
     return (
       <View style={this.props.containerStyle}>
-        {/* {this.state.selectedFlag ? (
-          <TouchableOpacity
-            disabled={this.props.disable}
-            onPress={() => this.setState({modalVisible: true})}
-            activeOpacity={0.7}>
-            <View style={styles.selectedCountryContainer}>
-              {this.props.hideCountryFlag ? null : (
-                <Image
-                  source={{
-                    uri: this.state.selectedCountryFlag,
-                  }}
-                  style={styles.countryFlagContainer}
-                />
-              )}
-              {this.props.hideCountryCode ? null : (
-                <Text style={this.props.selectedCountryTextStyle}>
-                  {'+' + this.state.selectedCountryCode}
-                </Text>
-              )}
-
-              {this.props.hideCountryShortName ? null : (
-                <Text style={this.props.selectedCountryTextStyle}>
-                  {this.state.selectedCountryShortName}
-                </Text>
-              )}
-
-              <Image
-                source={this.props.dropDownImage}
-                style={styles.dropDownImageStyle}
-              />
-            </View>
-          </TouchableOpacity>
-        ) : ( */}
         <TouchableOpacity
           disabled={this.props.disable}
           onPress={() => this.setState({modalVisible: true})}
@@ -178,7 +143,6 @@ export default class CountryPicker extends Component {
             )}
           </View>
         </TouchableOpacity>
-        {/* )} */}
 
         <Modal
           animationType={this.props.animationType}
@@ -215,23 +179,11 @@ export default class CountryPicker extends Component {
                 blurOnSubmit={true}
               />
             )}
-
-            {/* <TouchableOpacity
-              disabled={this.props.disable}
-              activeOpacity={0.5}
-              style={styles.searchImageStyle}
-              onPress={() =>
-                this.setState({
-                  hideSearchBar: !this.state.hideSearchBar,
-                  hidePickerTitle: !this.state.hidePickerTitle,
-                })
-              }> */}
             <Image
               resizeMode="contain"
               style={styles.searchImageStyle}
               source={this.props.searchButtonImage}
             />
-            {/* </TouchableOpacity> */}
           </View>
 
           <FlatList
@@ -240,7 +192,6 @@ export default class CountryPicker extends Component {
             keyboardShouldPersistTaps={'handled'}
             showsVerticalScrollIndicator={false}
             initialNumToRender={50}
-            // onScroll={this._handleScroll}
             data={this.state.arrayData}
             numColumns={1}
             keyExtractor={(item, index) => index.toString()}
