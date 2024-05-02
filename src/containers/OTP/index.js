@@ -8,7 +8,6 @@ import {
   Button,
 } from '../../components';
 import {hp, normalize} from '../../styles/responsiveScreen';
-import PublicModel from '../../models/PublicModel';
 import {connect} from 'react-redux';
 import {styles} from './styles';
 import utils from '../../helper/utils';
@@ -17,6 +16,7 @@ import OTPInputView from '@twotalltotems/react-native-otp-input';
 import {Check} from '../../assets/Icons';
 import colors from '../../assets/colors';
 import otpService from '../../services/otpService';
+import {Constant} from '../../constants/AppTexts';
 
 export const routeName = 'OTP';
 const OTP = ({navigation, route}) => {
@@ -63,13 +63,13 @@ const OTP = ({navigation, route}) => {
           size={normalize(24)}
           name="worksans-semibold"
           pBottom={hp(1.5)}>
-          {'Enter OTP'}
+          {Constant?.OTPTitle}
         </FontText>
 
         <HighlightText
           highlightStyle={styles.highlightedText}
-          searchWords={[`${phoneNumber}`]}
-          textToHighlight={`A one-time pin has been sent to\n+${phoneNumber}. Please enter it below`}
+          searchWords={[`+${phoneNumber}`]}
+          textToHighlight={`${Constant?.OneTimePin}\n+${phoneNumber}${Constant?.EnterBelow}`}
           style={styles.headerText}
         />
 
@@ -106,7 +106,7 @@ const OTP = ({navigation, route}) => {
               <Image source={Check} style={styles.iconCheck} />
             </View>
             <FontText size={normalize(18)} name="worksans-medium" color="green">
-              {'Confirmed'}
+              {Constant?.Confirmed}
             </FontText>
           </View>
         )}
@@ -124,7 +124,7 @@ const OTP = ({navigation, route}) => {
             size={normalize(16)}
             color="textSecondary"
             name="worksans-semibold">
-            {'Resend OTP'}
+            {Constant?.ResendOTP}
           </FontText>
         </Button>
 
@@ -141,7 +141,7 @@ const OTP = ({navigation, route}) => {
             name="worksans-semibold"
             size={normalize(16)}
             color={OTP?.length != 6 ? 'lightGray' : 'white'}>
-            {'Next'}
+            {Constant?.Next}
           </FontText>
         </Button>
 
@@ -154,7 +154,7 @@ const OTP = ({navigation, route}) => {
             size={normalize(16)}
             color="textSecondary"
             name="worksans-semibold">
-            {'Back'}
+            {Constant?.Back}
           </FontText>
         </Button>
       </View>
@@ -163,9 +163,7 @@ const OTP = ({navigation, route}) => {
 };
 
 const mapStateToProps = state => {
-  return {
-    population: PublicModel.getInstance('population', state).props.population,
-  };
+  return {};
 };
 
 export default connect(mapStateToProps)(OTP);

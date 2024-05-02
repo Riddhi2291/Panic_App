@@ -1,5 +1,5 @@
 import {URLS} from '../constants/urls';
-import {getRequestApi, postRequestApi} from '../helper/AxiosHelper';
+import {postRequestApi} from '../helper/AxiosHelper';
 
 const checkValidOTP = async data => {
   try {

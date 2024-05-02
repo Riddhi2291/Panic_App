@@ -31,9 +31,10 @@ import CountryJSON from '../../constants/countries.json';
 import colors from '../../assets/colors';
 import {Check} from '../../assets/Icons';
 import {routeName as otpRouteName} from '../OTP';
+import {Constant} from '../../constants/AppTexts';
 
 export const routeName = 'SignUp';
-const SignUp = ({navigation, population}) => {
+const SignUp = ({navigation}) => {
   const [countryCode, setCountryCode] = useState('US');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [isTermsSelected, setIsTermsSelected] = useState(false);
@@ -85,12 +86,10 @@ const SignUp = ({navigation, population}) => {
       value,
       countryData?.countryCode,
     );
-    // const phoneNumber = parsePhoneNumber(value, countryData?.countryCode);
     return validLength == undefined;
   };
 
   const onChangePhoneNumber = value => {
-    // const number = new AsYouType(newData?.[0]?.countryCode).input(value);
     const number = formatPhoneNumber(value, countryCode);
     setPhoneNumber(number);
   };
@@ -110,24 +109,18 @@ const SignUp = ({navigation, population}) => {
       validatePhone(phoneNumber) &&
       isTermsSelected
     ) {
+      const countryData = getCountry(countryCode);
       utils?.startLoader();
       setTimeout(() => {
         utils.stopLoader();
         navigation.navigate(otpRouteName, {
-          phoneNumber: `${countryCode}${phoneNumber}`,
+          phoneNumber: `${countryData?.callingCode}${phoneNumber}`,
         });
       }, 1000);
     }
   };
 
   const onSubmitPhoneNumber = value => {
-    // const countryData = getCountry(countryCode);
-    // const validNumber = isValidPhoneNumber(value, countryData?.countryCode);
-    // const validLength = validatePhoneNumberLength(
-    //   value,
-    //   countryData?.countryCode,
-    // );
-    // const phoneNumber = parsePhoneNumber(value, countryData?.countryCode);
     Keyboard.dismiss();
   };
 
@@ -147,28 +140,28 @@ const SignUp = ({navigation, population}) => {
           color="textPrimary"
           size={normalize(24)}
           name="worksans-semibold">
-          {'Welcome to Rappid Panic'}
+          {Constant?.SignUpTitle}
         </FontText>
         <FontText
           color="textPrimary"
           size={normalize(16)}
           pTop={hp(1.5)}
           pBottom={hp(1.5)}>
-          {'Enter your number to get started.'}
+          {Constant?.SignUpDesc1}
         </FontText>
         <FontText
           color="textPrimary"
           size={normalize(16)}
           textAlign={'center'}
           lineHeightFactor={1.2}>
-          {`This will also be the number we call to\nconfirm responses, so make sure it’s one\nyou have readily available.`}
+          {Constant?.SignUpDesc2}
         </FontText>
         <View style={styles.phoneContainer}>
           <Input
             color="black"
             value={phoneNumber}
             fontSize={normalize(16)}
-            placeholder={'Phone Number'}
+            placeholder={Constant?.PhoneNumber}
             placeholderTextColor="placeholder"
             style={styles.inputConatiner}
             inputStyle={[styles.phoneInput]}
@@ -184,7 +177,7 @@ const SignUp = ({navigation, population}) => {
               containerStyle={styles.codePickerStyle}
               selectedCountryTextStyle={styles.selectedCountryTextStyle}
               countryNameTextStyle={styles.countryNameTextStyle}
-              searchBarPlaceHolder={'Search......'}
+              searchBarPlaceHolder={Constant?.Search}
               hideCountryFlag={true}
               hideCountryShortName={true}
               searchBarStyle={styles.searchBarStyle}
@@ -203,7 +196,7 @@ const SignUp = ({navigation, population}) => {
               paddingLeft: wp(2),
             }}
             countryNameTextStyle={styles.countryNameTextStyle}
-            searchBarPlaceHolder={'Search......'}
+            searchBarPlaceHolder={Constant?.Search}
             hideCountryCode={true}
             searchBarStyle={styles.searchBarStyle}
             countryCode={countryCode}
@@ -217,8 +210,8 @@ const SignUp = ({navigation, population}) => {
           style={styles.txtError}>
           {checkError && isValidPhone
             ? phoneNumber.length === 0
-              ? 'Please enter number'
-              : 'Please enter valid number'
+              ? Constant?.EnterNumber
+              : Constant?.ValidNumber
             : ''}
         </FontText>
         <TouchableWithoutFeedback onPress={onPressTermsCheck}>
@@ -233,7 +226,7 @@ const SignUp = ({navigation, population}) => {
               <Image source={Check} style={styles.iconCheck} />
             </View>
             <FontText size={normalize(14)} color="textSecondary">
-              {'I agree to the'}
+              {Constant?.IAgree}
             </FontText>
             <Button flex={false} height={null} onPress={handleTermsUse}>
               <FontText
@@ -241,7 +234,7 @@ const SignUp = ({navigation, population}) => {
                 color="textSecondary"
                 name="worksans-semibold"
                 textDecoration="underline">
-                {'Terms of Use'}
+                {Constant?.TermsUse}
               </FontText>
             </Button>
           </View>
@@ -253,7 +246,7 @@ const SignUp = ({navigation, population}) => {
           pTop={hp(0.5)}
           style={{...styles.txtError, marginTop: hp(2)}}
           textAlign={'center'}>
-          {checkError && !isTermsSelected ? 'Please Select Terms of Use' : ''}
+          {checkError && !isTermsSelected ? Constant?.SelectTerms : ''}
         </FontText>
 
         <Button
@@ -265,7 +258,7 @@ const SignUp = ({navigation, population}) => {
           onPress={onPressNext}
           style={styles.btnNext}>
           <FontText name="worksans-semibold" size={normalize(16)} color="white">
-            {'Next'}
+            {Constant?.Next}
           </FontText>
         </Button>
       </View>

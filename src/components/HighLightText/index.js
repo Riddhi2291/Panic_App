@@ -3,7 +3,7 @@ import {Text as RNText, TouchableOpacity} from 'react-native';
 import {findAll} from 'highlight-words-core';
 
 export default function HighlightText({
-  autoEscape,
+  autoEscape = true,
   caseSensitive,
   sanitize,
   searchWords,
