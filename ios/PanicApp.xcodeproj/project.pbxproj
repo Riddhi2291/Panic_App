@@ -12,8 +12,16 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1AD5F8F29F1649FBAFA5D0F7 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59757962AFA344B5A3566501 /* WorkSans-Regular.ttf */; };
+		43FE4A5C94AA420F827376CA /* WorkSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353D5AD190B24187B6C27997 /* WorkSans-Thin.ttf */; };
+		5D62978ED6A74776A2102A90 /* WorkSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11F25593FA7C40EBA7C205CC /* WorkSans-Medium.ttf */; };
+		67873AE0548C4A24839571BA /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FA16F56F3D84305AD110FDE /* WorkSans-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-PanicApp-PanicAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PanicApp-PanicAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B8C17D35508B4F1D97B2D19B /* WorkSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8AF896A31124EF9A42EE39A /* WorkSans-ExtraBold.ttf */; };
+		C8BDBCA78EB3400BB0365C7B /* WorkSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42DC20F739E34033BA9E0A38 /* WorkSans-SemiBold.ttf */; };
+		D58681AAE1554F218905D63D /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61A5BF5C02D24BEE85057ED1 /* WorkSans-Bold.ttf */; };
+		DE68117C96CE491195F60DA3 /* WorkSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB411F98A4D479F88B56CFD /* WorkSans-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +38,7 @@
 		00E356EE1AD99517003FC87E /* PanicAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanicAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PanicAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanicAppTests.m; sourceTree = "<group>"; };
+		11F25593FA7C40EBA7C205CC /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Medium.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Medium.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PanicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PanicApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = PanicApp/AppDelegate.mm; sourceTree = "<group>"; };
@@ -38,12 +47,19 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PanicApp/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = PanicApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-PanicApp-PanicAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PanicApp-PanicAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		353D5AD190B24187B6C27997 /* WorkSans-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Thin.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Thin.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-PanicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanicApp.debug.xcconfig"; path = "Target Support Files/Pods-PanicApp/Pods-PanicApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3BB411F98A4D479F88B56CFD /* WorkSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Black.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Black.ttf"; sourceTree = "<group>"; };
+		42DC20F739E34033BA9E0A38 /* WorkSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-SemiBold.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PanicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanicApp.release.xcconfig"; path = "Target Support Files/Pods-PanicApp/Pods-PanicApp.release.xcconfig"; sourceTree = "<group>"; };
+		59757962AFA344B5A3566501 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Regular.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PanicApp-PanicAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanicApp-PanicAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PanicApp-PanicAppTests/Pods-PanicApp-PanicAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-PanicApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PanicApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61A5BF5C02D24BEE85057ED1 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Bold.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PanicApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PanicApp-PanicAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanicApp-PanicAppTests.release.xcconfig"; path = "Target Support Files/Pods-PanicApp-PanicAppTests/Pods-PanicApp-PanicAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FA16F56F3D84305AD110FDE /* WorkSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Light.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		B8AF896A31124EF9A42EE39A /* WorkSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-ExtraBold.ttf"; path = "../src/assets/fonts/WorkSans/WorkSans-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -124,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				9F6A2A5C47544B52B466A14E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,6 +154,22 @@
 				00E356EE1AD99517003FC87E /* PanicAppTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9F6A2A5C47544B52B466A14E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3BB411F98A4D479F88B56CFD /* WorkSans-Black.ttf */,
+				61A5BF5C02D24BEE85057ED1 /* WorkSans-Bold.ttf */,
+				B8AF896A31124EF9A42EE39A /* WorkSans-ExtraBold.ttf */,
+				8FA16F56F3D84305AD110FDE /* WorkSans-Light.ttf */,
+				11F25593FA7C40EBA7C205CC /* WorkSans-Medium.ttf */,
+				59757962AFA344B5A3566501 /* WorkSans-Regular.ttf */,
+				42DC20F739E34033BA9E0A38 /* WorkSans-SemiBold.ttf */,
+				353D5AD190B24187B6C27997 /* WorkSans-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -245,6 +278,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				DE68117C96CE491195F60DA3 /* WorkSans-Black.ttf in Resources */,
+				D58681AAE1554F218905D63D /* WorkSans-Bold.ttf in Resources */,
+				B8C17D35508B4F1D97B2D19B /* WorkSans-ExtraBold.ttf in Resources */,
+				67873AE0548C4A24839571BA /* WorkSans-Light.ttf in Resources */,
+				5D62978ED6A74776A2102A90 /* WorkSans-Medium.ttf in Resources */,
+				1AD5F8F29F1649FBAFA5D0F7 /* WorkSans-Regular.ttf in Resources */,
+				C8BDBCA78EB3400BB0365C7B /* WorkSans-SemiBold.ttf in Resources */,
+				43FE4A5C94AA420F827376CA /* WorkSans-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
